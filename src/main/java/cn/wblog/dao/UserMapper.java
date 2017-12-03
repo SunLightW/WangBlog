@@ -1,13 +1,19 @@
 package cn.wblog.dao;
 
-import cn.jasmine.collection.User;
-import cn.jasmine.collection.UserExample;
-import java.util.List;
 
 import cn.wblog.entity.User;
-import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+/**
+ * 用户dao接口
+ */
+@Repository
 public interface UserMapper {
 
+     /**
+      * 根据用户名查找用户
+      * @param username
+      * @return
+      */
      User getUserByUsername(String username);
 }

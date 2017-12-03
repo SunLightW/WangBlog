@@ -1,5 +1,9 @@
 package cn.wblog.entity;
 
+
+/**
+ * 一级菜单entity
+ */
 public class One_tree {
   private Long id;
   private String name;

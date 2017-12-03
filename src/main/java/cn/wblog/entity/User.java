@@ -1,5 +1,9 @@
 package cn.wblog.entity;
 
+
+/**
+ * 用户entity
+ */
 public class User {
   private Long id;//id
   private String username;

@@ -1,9 +1,11 @@
 package cn.wblog.dao;
 
-import cn.jasmine.collection.OneTree;
-import cn.jasmine.collection.OneTreeExample;
-import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
+import org.springframework.stereotype.Repository;
+
+/**
+ * 一级菜单dao接口
+ */
+@Repository
 public interface OneTreeMapper {
 }

@@ -1,9 +1,13 @@
-package com.my.db;
+package cn.wblog.entity;
 
+
+/**
+ * 二级菜单entity
+ */
 public class Two_tree {
   private Long id;
   private String name;
-  private Long father_id;
+  private Long father_id;//一级菜单外键
 
   public Long getId() {
     return id;

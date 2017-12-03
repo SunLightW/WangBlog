@@ -1,5 +1,9 @@
-package com.my.db;
+package cn.wblog.entity;
 
+/**
+ * 博客文章内容entity
+ *
+ */
 public class Paper {
   private Long id;
   private String title;
