@@ -8,7 +8,7 @@ public class User {
   private String state;//角色
   private String email;
   private String tel;
-  private String creattime;
+  private String createtime;
   private String updatetime;
   private String isexist;//是否存在。0.不存在;1.存在
   private String lastip;
@@ -71,11 +71,11 @@ public class User {
   }
 
   public String getCreattime() {
-    return creattime;
+    return createtime;
   }
 
   public void setCreattime(String creattime) {
-    this.creattime = creattime;
+    this.createtime = creattime;
   }
 
   public String getUpdatetime() {

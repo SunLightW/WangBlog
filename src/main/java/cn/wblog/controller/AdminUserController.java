@@ -52,6 +52,11 @@ public class AdminUserController {
     }
 
 
+    /**
+     * 插入新用户
+     * @param request
+     * @throws Exception
+     */
     @RequestMapping(value = "/insertuser")
     public void insertUser(HttpServletRequest request) throws Exception {
         User user = new User();
@@ -63,8 +68,8 @@ public class AdminUserController {
         user.setTel(request.getParameter("tel"));
         user.setCreattime(DateUtil.formatDate_datetime(DateUtil.getNowDate()));
         user.setIsexist("1");
-        user.setLastip(request.getParameter("ip"));
-        user.setIplocation(TbIPUtil.getAddress(request.getParameter("ip"),"utf-8"));
+        user.setLastip(request.getRemoteAddr());
+        user.setIplocation(TbIPUtil.getAddress(request.getRemoteAddr().toString(),"utf-8"));
         userService.insertUser(user);
     }
 }
