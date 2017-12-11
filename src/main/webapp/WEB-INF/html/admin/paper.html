@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> - jqGird</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <!--bootstrap css-->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!--awesome font css-->
+    <link href="https://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--animate css动画样式-->
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+
+    <!-- jqgrid css-->
+    <link href="https://cdn.bootcss.com/jqgrid/4.6.0/css/ui.jqgrid.css" rel="stylesheet">
+
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+    <style>
+        /* Additional style to fix warning dialog position */
+        #alertmod_table_list_2 {
+            top: 900px !important;
+        }
+    </style>
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content  animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox ">
+                    <div class="ibox-title">
+                        <h5>文章分类管理</h5>
+                    </div>
+                    <div class="ibox-content">
+
+                        <h4>基本示例</h4>
+                        <div class="jqGrid_wrapper">
+                            <table id="table_list_1"></table>
+                            <div id="pager_list_1"></div>
+                        </div>
+                        <p>&nbsp;</p>
+
+                        <h4 class="m-t">高级用法</h4>
+                        <div class="jqGrid_wrapper">
+                            <table id="table_list_2"></table>
+                            <div id="pager_list_2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <!--jquery -->
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--bootstrap-->
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!--插件-->
+    <!-- Peity -->
+    <script src="https://cdn.bootcss.com/peity/3.2.1/jquery.peity.min.js"></script>
+    <!-- jqGrid -->
+    <script src="https://cdn.bootcss.com/jqgrid/4.6.0/js/i18n/grid.locale-cn.js"></script>
+    <script src="https://cdn.bootcss.com/jqgrid/4.6.0/js/jquery.jqGrid.min.js"></script>
+    <!--ECharts-->
+    <script src="https://cdn.bootcss.com/echarts/2.2.7/echarts-all.js"></script>
+
+    <!-- 自定义js -->
+    <script type="text/javascript" src="js/content.js?v=1.0.0"></script>
+    <script type="text/javascript" src="js/category_paper.js"></script>
+</body>
+
+</html>

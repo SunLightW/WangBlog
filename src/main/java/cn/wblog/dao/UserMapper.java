@@ -5,6 +5,8 @@ import cn.wblog.entity.User;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * 用户dao接口
  */
@@ -17,5 +19,13 @@ public interface UserMapper {
       * @param username
       * @return
       */
-     User getUserByUsername(String username);
+     String getUserByUsername(String username);
+
+     /**
+      * 查询所有用户
+      * @return
+      */
+     List<User> findAllUser();
+
+     void insertUser(User user);
 }

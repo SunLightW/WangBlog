@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> - jqGird</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <!--bootstrap css-->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!--awesome font css-->
+    <link href="https://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--animate css动画样式-->
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+
+    <!-- jqgrid css-->
+    <link href="https://cdn.bootcss.com/jqgrid/4.6.0/css/ui.jqgrid.css" rel="stylesheet">
+
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+    <style>
+        /* Additional style to fix warning dialog position */
+        #alertmod_table_list_2 {
+            top: 900px !important;
+        }
+    </style>
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content  animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox ">
+                    <div class="ibox-title">
+                        <h5>用户管理</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div id="btns">
+                            <button id="insert_user" class="btn btn-success" data-toggle="modal" data-target="#insert_model">新增</button>
+                            <button id="update_user" class="btn btn-warning">更新</button>
+                            <button id="delete_user" class="btn btn-danger">删除</button>
+                        </div>
+                        <div class="jqGrid_wrapper">
+                            <table id="table_list_1"></table>
+                            <div id="pager_list_1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="insert_model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">新增用户</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="in_username">@</span>
+                        <input type="text" class="form-control" placeholder="用户名" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="in_password">@</span>
+                        <input type="text" class="form-control" placeholder="密码" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="in_realname">@</span>
+                        <input type="text" class="form-control" placeholder="真实姓名" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="in_state">@</span>
+                        <input type="text" class="form-control" placeholder="身份" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="in_email">@</span>
+                        <input type="text" class="form-control" placeholder="电子邮件" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="in_tel">@</span>
+                        <input type="text" class="form-control" placeholder="电话" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">提交更改</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+    <!-- 全局js -->
+    <!--jquery -->
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--bootstrap-->
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!--插件-->
+    <!-- Peity -->
+    <script src="https://cdn.bootcss.com/peity/3.2.1/jquery.peity.min.js"></script>
+    <!-- jqGrid -->
+    <script src="https://cdn.bootcss.com/jqgrid/4.6.0/js/i18n/grid.locale-cn.js"></script>
+    <script src="https://cdn.bootcss.com/jqgrid/4.6.0/js/jquery.jqGrid.min.js"></script>
+    <!--ECharts-->
+    <script src="https://cdn.bootcss.com/echarts/2.2.7/echarts-all.js"></script>
+
+    <!-- 自定义js -->
+    <script type="text/javascript" src="js/content.js?v=1.0.0"></script>
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+</body>
+
+</html>

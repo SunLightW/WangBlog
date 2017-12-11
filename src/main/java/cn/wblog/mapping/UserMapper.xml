@@ -3,25 +3,33 @@
 <!--绑定接口-->
 <mapper namespace="cn.wblog.dao.UserMapper">
 
-  <resultMap id="BaseResultMap" type="cn.wblog.entity.User">
+  <resultMap id="userMap" type="cn.wblog.entity.User">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="password" jdbcType="VARCHAR" property="password" />
     <result column="realname" jdbcType="VARCHAR" property="realname" />
     <result column="state" jdbcType="VARCHAR" property="state" />
     <result column="email" jdbcType="VARCHAR" property="email" />
-    <result column="tel" jdbcType="VARCHAR" property="tel" />
+    <result column="createtime" jdbcType="VARCHAR" property="createtime" />
+    <result column="updatetime" jdbcType="VARCHAR" property="updatetime" />
+    <result column="isexist" jdbcType="VARCHAR" property="isexist" />
+    <result column="lastip" jdbcType="VARCHAR" property="lastip" />
+    <result column="iplocation" jdbcType="VARCHAR" property="iplocation" />
   </resultMap>
 
-  <select id="getUserByUsername" parameterType="java.lang.String" resultType="cn.wblog.entity.User">
-      SELECT * FROM user WHERE username = #{username}
+  <!--根据用户名查询密码-->
+  <select id="getUserByUsername" parameterType="java.lang.String" resultType="java.lang.String">
+      SELECT password FROM user WHERE username = #{username}
   </select>
 
+  <!--查询所有用户-->
+  <select id="findAllUser" resultMap="userMap">
+    SELECT * FROM  user
+  </select>
 
-  <!--<select id="getUserByUsername" parameterType="java.lang.String" resultType="java.lang.String">-->
-    <!--SELECT password FROM  user WHERE username = #{username}-->
-
-  <!--</select>-->
-
+  <!--添加新用户-->
+  <insert id="insertUser" parameterType="cn.wblog.entity.User">
+    INSERT INTO user(username,password,realname,state,email,createtime,updatetime,isexist,lastip,iplocation) VALUES (#{username},#{password},#{realname},#{state},#{email},#{createtime},#{updatetime},#{isexist},#{lastip},#{iplocation})
+  </insert>
 
 </mapper>

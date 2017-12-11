@@ -62,5 +62,11 @@ public class MD5Util {
         int d2 = n % 16;
         return hexDigits[d1] + hexDigits[d2];
     }
+
+    public static void main(String[] args) {
+        MD5Util md5Util = new MD5Util();
+        String s = md5Util.MD5Encode("jasmine", "utf-8", true);
+        System.out.println(s);
+    }
 }
 

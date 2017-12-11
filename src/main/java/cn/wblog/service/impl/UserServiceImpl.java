@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 用户service实现类
@@ -26,10 +27,25 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     @Override
-    public User getUserByUsername(String username) {
-        System.out.println(username);
-        User userByUsername = userMapper.getUserByUsername(username);
+    public String getUserByUsername(String username) {
+        return userMapper.getUserByUsername(username);
+    }
 
-        return userByUsername;
+    /**
+     * 查询所有用户
+     * @return
+     */
+    @Override
+    public List<User> findAllUser() {
+        return  userMapper.findAllUser();
+    }
+
+    /**
+     * 插入用户
+     * @param user
+     */
+    @Override
+    public void insertUser(User user) {
+        userMapper.insertUser(user);
     }
 }
