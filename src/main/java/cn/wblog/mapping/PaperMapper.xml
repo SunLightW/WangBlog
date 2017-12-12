@@ -2,14 +2,21 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cn.wblog.dao.PaperMapper">
-  <resultMap id="BaseResultMap" type="cn.wblog.entity.Paper">
+
+  <resultMap id="paperMap" type="cn.wblog.entity.Paper">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="time" jdbcType="VARCHAR" property="time" />
     <result column="author" jdbcType="VARCHAR" property="author" />
     <result column="paper" jdbcType="VARCHAR" property="paper" />
-    <result column="user_id" jdbcType="INTEGER" property="userId" />
-    <result column="one_id" jdbcType="INTEGER" property="oneId" />
-    <result column="two_id" jdbcType="INTEGER" property="twoId" />
+    <result column="user_id" jdbcType="INTEGER" property="user_id" />
+    <result column="one_id" jdbcType="INTEGER" property="one_id" />
+    <result column="two_id" jdbcType="INTEGER" property="two_id" />
   </resultMap>
+
+  <!--查询所有文章-->
+  <select id="findAllPaper" resultMap="paperMap">
+    SELECT title,time,author,one_id,two_id FROM paper
+  </select>
+
 </mapper>
