@@ -9,7 +9,7 @@ $(function () {
     /*
      *查询所 有用户信息
      */
-    $('#userlist').bootstrapTable({
+    $('#paperlist').bootstrapTable({
         url: rootPath + "/admin/alluser",   //请求后台的URL（*）
         method: 'get',                      //请求方式（*）
         contentType: "application/x-www-form-urlencoded",/*支持跨域**/
