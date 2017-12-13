@@ -16,7 +16,7 @@
 
   <!--查询所有文章-->
   <select id="findAllPaper" resultMap="paperMap">
-    SELECT title,time,author,one_id,two_id FROM paper
+    SELECT * FROM paper
   </select>
 
 </mapper>

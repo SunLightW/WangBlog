@@ -1,5 +1,7 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<script type="text/javascript">
+    self.location="/WEB-INF/html/app/index.html";
+</script>
 </body>
 </html>

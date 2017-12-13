@@ -20,8 +20,8 @@
 
     <!-- bootstrap table css-->
     <link href="https://cdn.bootcss.com/bootstrap-table/1.11.1/bootstrap-table.min.css" rel="stylesheet">
-    <!--simditor css-->
-    <link href="https://cdn.bootcss.com/simditor/2.3.6/styles/simditor.min.css" rel="stylesheet">
+    <!--bootstrap markdown css-->
+    <link href="https://cdn.bootcss.com/bootstrap-markdown/2.10.0/css/bootstrap-markdown.min.css" rel="stylesheet">
 
     <!--自定义 css-->
     <link href="css/style.css?v=4.1.0" rel="stylesheet">
@@ -72,12 +72,12 @@
             </div>
             <div class="modal-body">
                 <div id="edit_div">
-                    <textarea id="editor" placeholder="请输入内容...." autofocus></textarea>
+                    <textarea name="content" data-provide="markdown" rows="10"></textarea>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button id="insert_user" type="button" class="btn btn-primary">提交更改</button>
+                <button id="insert_user" type="button" class="btn btn-primary">提交</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal -->
@@ -91,21 +91,22 @@
 <!--bootstrap-->
 <script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <!--config js-->
-<script type="text/javascript" src="config.js"></script>
+<script type="text/javascript" src="../config.js"></script>
 
 <!--插件-->
 <!-- Peity -->
 <script src="https://cdn.bootcss.com/peity/3.2.1/jquery.peity.min.js"></script>
-<!-- bootstrap table -->
+<!-- bootstrap table 表格-->
 <script src="https://cdn.bootcss.com/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
-<!--ECharts-->
+<!--ECharts 图形-->
 <script src="https://cdn.bootcss.com/echarts/2.2.7/echarts-all.js"></script>
-<!--simditor -->
-<script type="text/javascript" src="js/plugins/module.min.js"></script>
-<script type="text/javascript" src="js/plugins/uploader.min.js"></script>
-<script type="text/javascript" src="js/plugins/hotkeys.min.js"></script>
-<script src="https://cdn.bootcss.com/simditor/2.3.6/lib/simditor.min.js"></script>
+<!--markdown js 编辑器-->
+<script src="https://cdn.bootcss.com/markdown.js/0.5.0/markdown.min.js"></script>
+<!--to-markdown js 编辑器-->
+<script src="https://cdn.bootcss.com/to-markdown/3.1.1/to-markdown.min.js"></script>
+<!--bootstrap markdown js 编辑器-->
+<script src="https://cdn.bootcss.com/bootstrap-markdown/2.10.0/js/bootstrap-markdown.min.js"></script>
 
 <!-- 自定义js -->
 <script type="text/javascript" src="js/content.js?v=1.0.0"></script>
