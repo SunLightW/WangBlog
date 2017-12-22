@@ -1,80 +1,87 @@
 package cn.wblog.entity;
 
+
 /**
- * 博客文章内容entity
- *
+ * 文章 实体类
  */
 public class Paper {
-  private Long id;
-  private String title;
-  private String time;
-  private String author;
-  private String paper;
-  private Long user_id;
-  private Long one_id;
-  private Long two_id;
+    private Integer id;
 
-  public Long getId() {
-    return id;
-  }
+    private String title;
 
-  public void setId(Long id) {
-    this.id = id;
-  }
+    private String time;
 
-  public String getTitle() {
-    return title;
-  }
+    private String author;
 
-  public void setTitle(String title) {
-    this.title = title;
-  }
+    private Integer userId;
 
-  public String getTime() {
-    return time;
-  }
+    private Integer oneId;
 
-  public void setTime(String time) {
-    this.time = time;
-  }
+    private Integer twoId;
 
-  public String getAuthor() {
-    return author;
-  }
+    private String paper;
 
-  public void setAuthor(String author) {
-    this.author = author;
-  }
+    public Integer getId() {
+        return id;
+    }
 
-  public String getPaper() {
-    return paper;
-  }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-  public void setPaper(String paper) {
-    this.paper = paper;
-  }
+    public String getTitle() {
+        return title;
+    }
 
-  public Long getUser_id() {
-    return user_id;
-  }
+    public void setTitle(String title) {
+        this.title = title == null ? null : title.trim();
+    }
 
-  public void setUser_id(Long user_id) {
-    this.user_id = user_id;
-  }
+    public String getTime() {
+        return time;
+    }
 
-  public Long getOne_id() {
-    return one_id;
-  }
+    public void setTime(String time) {
+        this.time = time == null ? null : time.trim();
+    }
 
-  public void setOne_id(Long one_id) {
-    this.one_id = one_id;
-  }
+    public String getAuthor() {
+        return author;
+    }
 
-  public Long getTwo_id() {
-    return two_id;
-  }
+    public void setAuthor(String author) {
+        this.author = author == null ? null : author.trim();
+    }
 
-  public void setTwo_id(Long two_id) {
-    this.two_id = two_id;
-  }
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public Integer getOneId() {
+        return oneId;
+    }
+
+    public void setOneId(Integer oneId) {
+        this.oneId = oneId;
+    }
+
+    public Integer getTwoId() {
+        return twoId;
+    }
+
+    public void setTwoId(Integer twoId) {
+        this.twoId = twoId;
+    }
+
+    public String getPaper() {
+        return paper;
+    }
+
+    public void setPaper(String paper) {
+        this.paper = paper == null ? null : paper.trim();
+    }
 }

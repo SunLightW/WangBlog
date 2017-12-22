@@ -1,7 +1,8 @@
 <html>
 <body>
 <script type="text/javascript">
-    self.location="/WEB-INF/html/app/index.html";
+    console.log("jasmine");
+    window.location.href="http://www.cczustudio.cn";
 </script>
 </body>
 </html>
